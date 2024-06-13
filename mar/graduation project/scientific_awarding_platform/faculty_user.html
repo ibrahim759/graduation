@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="register/styles.css"> -->
+    <title>Registration Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="./css/regf.css">
+
+    <style type="text/css">
+        #add_faculty_user fieldset:not(:first-of-type) {
+            display: none;
+        }
+
+        #faculty-user_btn {
+    background-color: #fff; /* Default background color */
+    color: white; /* Default font color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition property for background color and font color */
+}
+
+#faculty-user_btn:hover {
+    background-color: #dd6e07; /* Hover background color */
+    color: black; /* Hover font color */
+}
+
+#faculty-user_btn {
+    /* Change the color of specific text within the button using ::first-line pseudo-element */
+    color: transparent; /* Set the text color to transparent */
+    position: relative; /* Set position to relative for proper ::first-line usage */
+}
+
+#faculty-user_btn::first-line {
+    color: black; /* Change the color of the first line (text "الصفحة التالية") to black */
+}
+
+faculty-user_back
+
+#faculty-user_back {
+    background-color: white; /* Default background color */
+    color: white; /* Default font color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition property for background color and font color */
+}
+
+#faculty-user_back:hover {
+    background-color: #dd6e07; /* Hover background color */
+    color: black; /* Hover font color */
+}
+
+#faculty-user_back {
+    /* Change the color of specific text within the button using ::first-line pseudo-element */
+    color: transparent; /* Set the text color to transparent */
+    position: relative; /* Set position to relative for proper ::first-line usage */
+}
+
+#faculty-user_back::first-line {
+    color: black; /* Change the color of the first line (text "الصفحة التالية") to black */
+}
+ 
+#faculty-user_back {
+    background-color: white; /* تعيين لون الخلفية للزر إلى اللون الأبيض */
+    color: black; /* تعيين لون النص إلى اللون الأسود */
+    /* إضافة أي تعديلات أخرى حسب الحاجة */
+}
+
+
+
+
+
+#faculty-user_send {
+    background-color: white; /* Default background color */
+    color: white; /* Default font color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition property for background color and font color */
+}
+
+#faculty-user_send:hover {
+    background-color: #dd6e07; /* Hover background color */
+    color: black; /* Hover font color */
+}
+
+#faculty-user_send {
+    /* Change the color of specific text within the button using ::first-line pseudo-element */
+    color: transparent; /* Set the text color to transparent */
+    position: relative; /* Set position to relative for proper ::first-line usage */
+}
+
+#faculty-user_send::first-line {
+    color: black; /* Change the color of the first line (text "الصفحة التالية") to black */
+}
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="bg">
+        <div class="container bg-transparent ">
+            <div class="row d-flex justify-content-center align-content-center py-3">
+                <!-- Your registration form goes here -->
+                <div class="col-lg-8 col-sm-12 col-xs-12">
+                    <div class="main">
+                        <div class="navbar">
+                            <img src="LL.png" alt="logo" class="LL" style="position: relative; right: 900px; height:150px;">
+                            <ul style="position: relative; bottom: 100px; left: 350px;">
+                                <li><a href="#">الصفحة الرئيسية</a></li>
+                                <li><a href="#">تسجيل </a></li>
+                                <li><a href="#">دخول </a></li>
+                                <li><a href="#"> من نحن؟</a></li>
+                                <li><a href="#">تواصل معنا</a></li>
+                            </ul>
+                        </div>
+                        <div class="d-flex justify-content-center bg-transparent">
+
+                            <div class="col-lg-8 col-sm-12 col-xs-12 bg-transparent">
+                                <div class="d-flex flex-column justify-content-center align-items-center gap-4 bg-transparent ">
+                                    <div class="progress w-100">
+                                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="background-color: chocolate;"></div>
+                                    </div>
+                                    <div class="card w-100 h-100 bg-transparent">
+                                        <div class="card-header ">
+                                            <h3 class="text-right pr-2"><span class="fa fa-user"></span>انشاء حساب</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="mt-3 mb-3" style="width: 100%; height: 20px; border-bottom: 1px solid #2c94a3; text-align: center">
+                                                <span style="background-color: #fff; padding: 0 10px;" class="text-primary">مرحبا بك</span>
+                                            </div>
+
+                                            <form action="./php/create_faculty_user.php" method="post" id="add_faculty_user" style="text-align:right">
+                                                <!-- Faculty User -->
+                                                <fieldset>
+                                                <div class="form-group">
+                                                    <label for="name_arabic" class="required">الأسم باللغة العربية</label>
+                                                    <input type="text" id="name_arabic" name="name_arabic" oninput="validateArabic(this)" required class="form-control text-right mr-2 bg-transparent jsv" placeholder="الأسم باللغة العربية" style="width: 400px; max-width: 100%;">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="name_english" class="required"> الاسم باللغة الانجليزية </label>
+                                                    <input type="text" id="name_english" name="name_english" oninput="validateEnglish(this)" required class="form-control mr-2 bg-transparent jsv" placeholder="Name in English" style="width: 400px; text-align: left;">
+                                                </div>
+
+                                                    <div class="form-group">
+                                                        <label for="birthday" class="required"> تاريخ الميلاد </label>
+                                                        <input type="date" id="birthday" name="birthday" required class="form-control mr-2 bg-transparent jsv " style="width: 400px;">
+                                                    </div>
+                                                <div class="form-group">
+                                                    <label for="birth_place" class="required">جهة الميلاد</label>
+                                                    <input type="text" id="birth_place" name="birth_place" oninput="validateAlphabetic(this)" required class="form-control mr-2 bg-transparent jsv" placeholder="جهة الميلاد" style="width: 400px;">
+                                                </div>
+
+                                                    <div class="form-group">
+                                                        <label for="national_id" class="required">الرقم القومي</label>
+                                                        <input type="text" name="national_id" id="national_id" oninput="validateIdNumber(this)" onkeypress="return numbersOnly(event)" maxlength="14" required="required" class="form-control mr-2 bg-transparent" style="width: 400px;">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="national_id_expiry" class="required">تاريخ انتهاء بطاقة الرقم القومي
+                                                        </label>
+                                                        <input type="date" id="national_id_expiry" name="national_id_expiry" required="required" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+    <label for="passport_number" class="required">رقم جواز السفر</label>
+    <input type="text" id="passport_number" maxlength="9" name="passport_number" required="required" oninput="validatePassportNumber(this)" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+</div>
+
+
+                                                    <div class="form-group">
+                                                         <label for="passport_issuing_authority" class="required">جهة اصدار جواز السفر</label>
+                                                          <input type="text" id="passport_issuing_authority" name="passport_issuing_authority" required="required" oninput=" validateAlphabetic(this)" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="passport_expiry" class="required">تاريخ انتهاء جواز السفر </label>
+                                                        <input type="date" id="passport_expiry" name="passport_expiry" required="required" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="address" class="required">عنوان السكن </label>
+                                                        <input type="text" id="address" name="address" required="required" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="doctorate_obtaining_date" class="required">تاريخ الحصول على الدكتوراه </label>
+                                                        <input type="date" id="doctorate_obtaining_date" name="doctorate_obtaining_date" required="required" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="doctorate_obtaining_destination" class="required">جهة الحصول على الدكتوراه </label>
+                                                        <input type="text" id="doctorate_obtaining_destination" name="doctorate_obtaining_destination" required="required" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="scientific_degree" class="required jsv"> الدرجة العلمية
+                                                        </label>
+                                                        <select style="width: 400px;padding-right:2rem" id="scientific_degree" name="scientific_degree" class="form-select form-control bg-transparent  jsv">
+                                                            <option value="professor"> استاذ</option>
+                                                            <option value="professor_assistant"> استاذ مساعد</option>
+                                                            <option value="emeritus_professor_assistant"> استاذ مساعد متفرغ</option>
+                                                            <option value="teacher">مدرس </option>
+                                                            <option value="full_time_teacher"> مدرس متفرغ</option>
+                                                            <option value="full_time_professor">استاذ متفرغ</option>
+                                                            <option value="dean"> عميد الكلية</option>
+                                                            <option value="president"> رئيس الجامعة</option>
+                                                            <option value="vice_president"> نائب رئيس الجامعة</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="current_degree_appointment_date" class="required">تاريخ التعيين في الدرجة الحالية
+                                                        </label>
+                                                        <input type="date" id="current_degree_appointment_date" name="current_degree_appointment_date" required="required" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="university" class="required">الجامعة </label>
+                                                        <input type="text" id="university" name="faculty_user_university" required="required" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="collage" class="required">الكلية </label>
+                                                        <input type="text" id="collage" name="faculty_user_collage" required="required" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="department" class="required">القسم</label>
+                                                        <input type="text" id="department" name="faculty_user_department" required="required" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="postal_code" class="required">العنوان البريدي </label>
+                                                        <input type="text" id="postal_code" name="faculty_user_postal_code" onkeyup="numbersOnly(this)" required="required" class="form-control mr-2 bg-transparent jsv" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="phone">رقم الهاتف</label>
+                                                        <input type="text" id="phone" name="faculty_user_phone"oninput="validatePositiveNumber(this)" maxlength="14"  onkeyup="numbersOnly(this)" class="form-control mr-3 bg-transparent jsv" placeholder="Enter your Phone Number" style="width: 400px;text-align:left">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>البريد الإلكتروني </label>
+                                                        <input type="email" id="email" name="faculty_user_email" required class="form-control mr-2 bg-transparent jsv" placeholder="tasnem@example.com" style="width: 400px;text-align:left">
+                                                    </div>
+                                                    <div class="form-group text-center">
+                                                        <button type="button" id="faculty-user_btn" class="next btn btn-primary rounded-3 p-1 w-50 text-white"  >الصفحه التاليه</button>
+                                                    </div>
+                                                </fieldset>
+
+                                                <!-- Foreign Host User -->
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <label for="travel_date"> تاريخ السفر </label>
+                                                        <input type="date" id="travel_date" name="travel_date" class="form-control mr-3 bg-transparent" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="scholarship_duration"> مدة الابتعاث </label>
+                                                        <input type="text" id="scholarship_duration" name="scholarship_duration" class="form-control mr-3 bg-transparent" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="scholarship_beginning"> بداية الابتعاث</label>
+                                                        <input type="date" id="scholarship_beginning" name="scholarship_beginning" class="form-control mr-3 bg-transparent" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="scholarship_end"> نهاية الابتعاث </label>
+                                                        <input type="date" id="scholarship_end" name="scholarship_end" class="form-control mr-3 bg-transparent" style="width: 400px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="name"> الأسم </label>
+                                                        <input type="text" id="name" name="name" class="form-control mr-3 bg-transparent" style="width:370px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="degree"> الدرجة</label>
+                                                        <input type="text" id="degree" name="degree" class="form-control mr-3 bg-transparent" style="width:370px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="country"> الدولة </label>
+                                                        <input type="text" id="country" name="country" class="form-control mr-3 bg-transparent" style="width:370px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="city"> المدينة</label>
+                                                        <input type="text" id="city" name="city" class="form-control mr-3 bg-transparent" style="width: 370px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="university"> الجامعة </label>
+                                                        <input type="text" id="university" name="university" class="form-control mr-3 bg-transparent" style="width:370px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="collage"> الكلية </label>
+                                                        <input type="text" id="collage" name="collage" class="form-control mr-3 bg-transparent" style="width:370px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="department"> القسم </label>
+                                                        <input type="text" id="department" name="department" class="form-control mr-3 bg-transparent" style="width:370px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="postal_code"> العنوان البريدي </label>
+                                                        <input type="text" id="postal_code" name="postal_code" maxlength="5" class="form-control mr-3 bg-transparent" style="width:370px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="phone"> الهاتف </label>
+                                                        <input type="text" id="phone" name="phone" class="form-control mr-3 bg-transparent" onkeyup="numbersOnly(this)" style="width:370px;text-align:left" placeholder="Enter the phone number">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="email"> البريد الإلكتروني </label>
+                                                        <input type="text" id="email" name="email" class="form-control mr-3 bg-transparent" placeholder="erick@example.com" style="width:370px;text-align:left">
+                                                    </div>
+                                                        <div class="form-group d-flex justify-content-center - align-items-center gap-3 text-center text-white bg-transparent">
+                                                            <input type="button" name="previous" class="previous btn-primary rounded-3 p-1 w-50" id="faculty-user_back"  value="رجوع">
+                                                        <input type="submit" name="submit" class="submit btn-success rounded-3 p-1 w-50" id="faculty-user_send" value="إرسال">
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap and necessary dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/restrictions.js"></script>
+    <script>
+        // Function to allow only numbers
+function numbersOnly(event) {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    // Allow numbers (key codes from 48 to 57) and prevent negative sign (-)
+    if (charCode < 48 || charCode > 57 || event.key === '-') {
+        event.preventDefault();
+    }
+}
+
+// Function to validate the ID number after input
+function validateIdNumber(input) {
+    if (input.value < 0) {
+        input.value = ''; // Clear the input if a negative number is entered
+        alert("Please enter a positive number."); // You can use other validation methods as well
+    }
+}
+
+
+// Function to validate Arabic input
+function validateArabic(input) {
+    const arabicRegex = /^[\u0600-\u06FF\s]+$/; // Regular expression for Arabic characters
+    if (!arabicRegex.test(input.value)) {
+        input.value = ''; // Clear the input if non-Arabic characters are entered
+        alert("الرجاء إدخال أحرف باللغة العربية فقط."); // You can use other validation methods as well
+    }
+}
+
+// Function to validate English input
+function validateEnglish(input) {
+    const englishRegex = /^[A-Za-z\s]+$/; // Regular expression for English characters
+    if (!englishRegex.test(input.value)) {
+        input.value = ''; // Clear the input if non-English characters are entered
+        alert("Please enter English characters only."); // You can use other validation methods as well
+    }
+}
+
+// Function to validate input as alphabetic (Arabic and English letters)
+function validateAlphabetic(input) {
+    const alphabeticRegex = /^[\u0600-\u06FFa-zA-Z\s]+$/; // Regular expression for Arabic and English characters
+    if (!alphabeticRegex.test(input.value)) {
+        input.value = input.value.replace(/[^a-zA-Z\u0600-\u06FF\s]/g, ''); // Remove non-alphabetic characters
+        alert("يرجى إدخال أحرف اللغة العربية أو الإنجليزية فقط."); // Display an alert for invalid characters
+    }
+}
+
+// Function to validate input as positive numbers
+function validatePositiveNumber(input) {
+    const numberRegex = /^\d+$/; // Regular expression for positive numbers
+    if (!numberRegex.test(input.value)) {
+        input.value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+        alert("يرجى إدخال أرقام "); // Display an alert for invalid characters
+    }
+}
+
+function validatePassportNumber(input) {
+    const arabicOrEnglishRegex = /^[\u0600-\u06FFa-zA-Z\s]+$/; // Regex for Arabic or English text
+    const positiveNumberRegex = /^\d+$/; // Regex for positive numbers
+
+    if (!arabicOrEnglishRegex.test(input.value) && !positiveNumberRegex.test(input.value)) {
+        input.value = input.value.replace(/[^a-zA-Z\u0600-\u06FF\d\s]/g, ''); // Remove characters that are not Arabic, English, or numbers
+        
+    }
+}
+
+
+
+    </script>
+</body>
+
+</html>

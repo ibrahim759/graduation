@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ابحاث مابعد الدكتوراه</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="main container">
+         <!-- Video Background -->
+        <video autoplay muted loop id="videoBG">
+            <source src="../home/pexels-tima-miroshnichenko-6550419 (2160p).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Navbar -->
+        <div class="navbar">
+            <img src="../home/pic/LL.png" class="LL">
+            <ul>
+                <!-- Navbar Items -->
+                <!-- <li><a href="#">تواصل معنا</a></li>
+                <li><a href="#">من نحن؟</a></li>
+                <li class="dropdown">
+                    <a href="">الكليات</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">كلية حاسبات ومعلومات</a></li>
+                        <li><a href="#">كلية ادراة الاعمال</a></li>
+                        <li><a href="#">كلية علوم</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">دخول </a></li>
+                <li><a href="#">تسجيل </a></li>
+                <li><a href="#">الصفحة الرئيسية</a></li> -->
+
+                <li><a href="../contactUs/index.html">تواصل معنا</a></li>
+                <li><a href="../من نحن/index.html"> من نحن؟</a></li>
+                <li><a href="#">دخول </a></li>
+                <li><a href="../register/!DOCTYPE html.html">تسجيل </a></li>
+                <li><a href="./tas$nosa/scientific_awarding_platform/register_faculty_user.php">الصفحة الرئيسية</a></li>
+                <li><a href="../home/index.html">الصفحة الرئيسية</a></li>
+            </ul>
+        </div>
+
+        <!-- Content Box -->
+        <div class="content-box">
+            <!-- Information Section -->
+            <div class="info">
+                <h3>انطلق في رحلة اكتشاف من خلال مهامنا العلمية المنسقة للباحثين في مرحلة ما بعد الدكتوراه</h3>
+                <h1><span>انغمس</span> في فرصه بحثية </h1>
+                <h3>لا مثيل لها تغذي الابتكار وتدفع حدود المعرفة العلمية</h3>   
+                <h3>وانضم إلى مجتمع عالمي من العلماء</h3>
+            </div>
+    </div>
+    <script>
+        document.getElementById("videoBG").play();
+    </script>
+</body>
+</html>

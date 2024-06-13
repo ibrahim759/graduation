@@ -1,0 +1,167 @@
+html {
+    height: 100%;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* استخدام صورة الخلفية */
+    background: url("./lol.jpg") no-repeat fixed center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+
+  header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+  }
+
+  /* الأنماط الأخرى لم تتغير ولكن يمكنك ضبطها وفقًا لاحتياجاتك */
+
+
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    direction: rtl;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+  }
+
+  th[dir="ltr"] {
+    background-color: #000000;
+    /*  استيفاء الشروط */
+    color: #fff;
+  }
+
+  th[dir="rtl"] {
+    background-color: #000000;
+    /*  وافق مجلس القسم */
+    color: #fff;
+  }
+
+  th[dir="rtl"]:nth-child(3) {
+    background-color: #000000;
+    /*  لا */
+  }
+
+  tr:hover {
+    background-color: white;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  td[dir="rtl"] {
+    text-align: right;
+    color: #000000;
+    /* White text */
+  }
+
+  td[dir="ltr"] {
+    text-align: left;
+  }
+
+  nav a:hover {
+    background-color: whitesmoke;
+    color: gold;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+    overflow: hidden;
+  }
+
+  nav li {
+    float: right;
+  }
+
+  nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .btn-submit {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+padding: 0.8em 2em;
+border: none;
+border-radius: 5px;
+font-weight: 500;
+color: gold;
+transition: all 1000ms;
+font-size: 15px;
+overflow: hidden;
+outline: 1px solid black;
+cursor: pointer;
+}
+.btn-submit:hover {
+color: gold;
+transform: scale(1.1);
+outline: 2px solid gold;
+box-shadow: 4px 5px 17px -4px white;
+}
+.btn-submit::before {
+content: "";
+position: absolute;
+top: 75%;
+left: 50%;
+width: 0;
+height: 100%;
+background-color: black;
+transform: skewX(45deg);
+z-index: -1;
+transition: width 1000ms;
+}
+
+
+.pgg{
+  width: 80px;
+  height: 35px;
+  background-color: black;
+  margin-right: 450px;
+  border-radius: 20px;
+  color: gold;
+}
+.pgh{
+  width: 80px;
+  height: 20px;
+  background-color: black;
+  margin-right: 300px;
+  border-radius: 20px;
+  color: gold;
+}
+.pgn{
+  width: 80px;
+  height: 20px;
+  background-color: black;
+  margin-left: -220px;
+  border-radius: 20px;
+  color: gold;
+}

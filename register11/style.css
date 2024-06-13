@@ -1,0 +1,230 @@
+
+body {
+	    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  
+
+  background-image: url("./city.jpg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+/* الأنماط الأخرى لم تتغير ولكن يمكنك ضبطها وفقًا لاحتياجاتك */
+
+
+        h2 {
+            color:rgb(228, 220, 217);
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+			 direction: rtl;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        th[dir="ltr"] {
+            background-color: #000000; /*  استيفاء الشروط */
+            color: #fff;
+        }
+
+        th[dir="rtl"] {
+            background-color: #f4f1f1; /*  وافق مجلس القسم */
+            color: #222020;
+        }
+
+        th[dir="rtl"]:nth-child(3) {
+            background-color: #000000; /*  لا */
+        }
+
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        td[dir="rtl"] {
+            text-align: right;
+            color: #000000; /* White text */
+        }
+
+        td[dir="ltr"] {
+            text-align: left;
+        }
+		nav a:hover {
+    background-color: rgb(238, 234, 233);
+    color: rgb(230,104,59);
+}nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(79, 73, 71);
+    overflow: hidden;
+}
+
+nav li {
+    float: right;
+}
+
+nav a {
+    display: block;
+    color: rgb(254, 254, 254);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ /*button{
+    margin-right: 50px;
+    size: 8px;
+    background: #000000;
+    color: aqua;
+}*/
+/*.buttons {
+    text-align: center;
+    margin-top: 20px; 
+   
+    
+}
+
+button {
+    padding: 10px;
+    background: #000000;
+    color: rgb(0, 255, 81);
+    border-radius: 10px;
+    
+}*/
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px; 
+    background:rgb(236, 156, 127);
+    color: rgb(43, 41, 41);
+    border-radius: 10px;
+    border: none; 
+      transition:  0.3s ease; 
+      justify-content: space-between;
+      }      
+
+button:hover {
+    background:rgb(230,104,59); /* Change the background color on hover */
+    cursor: pointer;}
+
+.btn{
+    margin-top: 5px;
+    padding:5px;
+
+}
+
+.n{
+    background:rgb(236, 156, 127);
+}
+
+
+
+
+
+
+img {
+    width: 100px;
+    height: 100px;
+    
+  }
+ 
+
+  .buttn{
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .logo-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .logo-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  #notificationsIcon {
+    font-size: 50px;
+    color: rgb(230,104,59); /* Default color */
+    cursor: pointer;
+    margin-right: 50px; /* Adjust the margin as needed */
+    position: absolute;
+    right: 0; /* Position it to the right */
+}
+
+#notificationsIcon.red {
+    color: red; /* Color when a request is sent */
+}
+/* قسم الـ CSS */
+/* قم بتعديل استايل Dropdown حسب احتياجاتك */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+

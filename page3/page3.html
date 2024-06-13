@@ -1,0 +1,317 @@
+<!-- <?php
+include('db_connection.php'); // Include your database connection file
+
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Get form data
+    $travelFrom = $_POST['travelFrom'];
+    $travelTo = $_POST['travelTo'];
+    $months = $_POST['months'];
+    $expense1 = $_POST['expense1'];
+    $expense2 = $_POST['expense2'];
+    $expense3 = $_POST['expense3'];
+    $expense4 = $_POST['expense4'];
+    $expense5 = $_POST['expense5'];
+    $ministryApprovalDate = $_POST['ministryApprovalDate'];
+    $committeeApprovalDate = $_POST['committeeApprovalDate'];
+    $publicAdministrationApprovalDate = $_POST['publicAdministrationApprovalDate'];
+    $facultyMemberLastTravelDate = $_POST['facultyMemberLastTravelDate'];
+    $lastContribution = $_POST['lastContribution'];
+    $currency = $_POST['currency'];
+
+    // Insert data into the database
+    $query = "INSERT INTO faculty_travel (travelFrom, travelTo, months, expense1, expense2, expense3, expense4, expense5, ministryApprovalDate, committeeApprovalDate, publicAdministrationApprovalDate, facultyMemberLastTravelDate, lastContribution, currency)
+              VALUES ('$travelFrom', '$travelTo', $months, '$expense1', '$expense2', '$expense3', '$expense4', '$expense5', '$ministryApprovalDate', '$committeeApprovalDate', '$publicAdministrationApprovalDate', '$facultyMemberLastTravelDate', $lastContribution, '$currency')";
+
+    // Check if the query was successful
+    if ($conn->query($query) === TRUE) {
+        echo "Data inserted successfully!";
+    } else {
+        echo "Error: " . $query . "<br>" . $conn->error;
+    }
+
+    // Close the database connection
+    $conn->close();
+}
+?> -->
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ابحاث ما بعد الدكتوراه (مهمه علميه حكوميه)</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+   
+        body {
+            
+            font-family: 'Arial', sans-serif;
+            background-image: url(background.png.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          
+        
+        }
+         form{
+            display: flex;
+            justify-content: center;
+           text-align: center;
+         }
+         .navbar{
+    width: 86%;
+    display: flex;
+    margin: auto;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar .LL{
+    width: 160px;
+    cursor: pointer;
+    margin-top: -2%;
+    margin-left: -6%;
+  }
+  
+  ul{
+    margin-top: -4%;
+  }
+  
+  ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 16px;
+  }
+  
+  ul li a{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: darkslategray;
+    margin-top: -3%;
+    transition: .4s ease;
+  
+  }
+  
+  ul li a:hover{
+    color: rgb(230,104,59);
+  }
+  
+        .container {
+            
+            background-color: #cfd8dc00;
+            padding: 20px 25px 30px;
+            /* padding: 25px 30px; */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.438);
+            margin-bottom: 100px;
+            width: 100%;
+            max-width: 700px;
+            border-radius: 5px;
+            text-align: right;
+        }
+
+        .container .title {
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+            color: rgb(6, 6, 6);
+            text-align: center
+           
+        }
+
+        .container .title::before {
+            content: calc();
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            background: linear-gradient(rgb(230, 104, 59), rgb(0, 0, 0));
+        }
+
+        .container form.user-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .container form.user-details .input-box,
+        .container form.user-details .category,
+        .container form.user-details .button {
+            width: calc(100% / 2 - 20px);
+            margin-bottom: 20px;
+        }
+
+        .container form.user-details .category select,
+        .container form.user-details .input-box input,
+        .container form.user-details .input-box select {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+            font-size: 16px;
+            border-bottom-width: 2px;
+            transition: all 0.3s ease;
+        }
+        .container form.user-details .category select,
+        .container form.user-details .input-box input,
+        .container form.user-details .input-box select
+        .container form.user-details .category select:focus,
+        .container form.user-details .input-box input:focus,
+        .container form.user-details .input-box select:focus,
+        .container form.user-details .category select:valid,
+        .container form.user-details .input-box input:valid,
+        .container form.user-details .input-box select:valid {
+            border-color: rgb(15, 14, 14);
+        }
+
+        .container form.user-details .button {
+            text-align: center;
+            width: 100%;
+        }
+
+        .container form.user-details input[type="submit"] {
+            background-color: #16020a;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .container form.user-details input[type="submit"]:hover {
+            background-color: rgb(230, 104, 59);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar mt-3 ">
+        <div class="container-fluid">
+            
+            <div class="navbar">
+                <ul class="ms-auto ">
+                    <li><a href="#">الصفحة الرئيسية</a></li>
+                    <li><a href="#">دخول </a></li>
+                    <li><a href="#">تسجيل </a></li>
+                    <li><a href="#"> من نحن؟</a></li>
+                    <li><a href="#">تواصل معنا</a></li>
+                </ul>
+                <img src="LL.png" class="LL">
+            </div>
+        </div>
+    </nav>
+    <div class="title">
+        <h1 style="text-align: center; color: rgb(6, 6, 6); margin-top: 20px; font-size: 30px;">بيانات سفر عضو هيئة التدريس</h1>
+    </div>
+          <form action="page3.html" method="post"></form>
+    <div class="container">
+      
+        <form action="#" class="user-details" method="post">
+            <div class="input-box">
+                <label for="travelFrom"><h5>تاريخ السفر من</h5></label>
+                <input type="date" id="travelFrom" name="travelFrom" required>
+            </div>
+            <div class="input-box">
+                <label for="travelTo"><h5>تاريخ السفر إلى</h5></label>
+                <input type="date" id="travelTo" name="travelTo" required>
+            </div>
+            <div class="input-box">
+                <label for="months"><h5>عدد الشهور </h5></label>
+                <input type="number" id="months" name="months" placeholder="عدد الشهور" required>
+            </div>
+            <div class="category">
+                <label for="universities"><h5>من جامعة جنوب الوادي</h5></label>
+                <select id="expense1" name="expense1" required>
+                    <option value="tickets">تزاكر</option>
+                    <option value="Accommodation">اقامه</option>
+                    <option value="Ration">اعاشه</option>
+                    <option value="salary">راتب شهري</option>
+                </select>
+            </div>
+            <div class="category">
+                <label for="foreignUniversity"><h5>من الجامعة الأجنبية التي يدرس فيها</h5></label>
+                <select id="expense2" name="expense2" required>
+                    <option value="tickets">تزاكر</option>
+                    <option value="Accommodation">اقامه</option>
+                    <option value="Ration">اعاشه</option>
+                    <option value="salary">راتب شهري</option>
+                </select>
+            </div>
+            <div class="category">
+                <label for="privateExpense"><h5>على نفقته الخاصة</h5></label>
+                <select id="expense3" name="expense3" required>
+                    <option value="tickets">تزاكر</option>
+                    <option value="Accommodation">اقامه</option>
+                    <option value="Ration">اعاشه</option>
+                    <option value="salary">راتب شهري</option>
+                </select>
+            </div>
+            <div class="category">
+                <label for="ministryExpense"><h5>على نفقة وزارة التعليم العالي</h5></label>
+                <select id="expense4" name="expense4" required>
+                    <option value="tickets">تزاكر</option>
+                    <option value="Accommodation">اقامه</option>
+                    <option value="Ration">اعاشه</option>
+                    <option value="salary">راتب شهري</option>
+                </select>
+            </div>
+            <div class="category">
+                <label for="otherExpense"><h5>على نفقة جهة أخرى</h5></label>
+                <select id="expense5" name="expense5" required>
+                    <option value="tickets">تزاكر</option>
+                    <option value="Accommodation">اقامه</option>
+                    <option value="Ration">اعاشه</option>
+                    <option value="salary">راتب شهري</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="ministryApprovalDate"><h5>تاريخ موافقة وزارة التعليم العالي على الترشيح </h5></label>
+                <input type="date" id="ministryApprovalDate" name="ministryApprovalDate">
+            </div>
+            <div class="input-box">
+                <label for="committeeApprovalDate"><h5>تاريخ اعتماد اللجنة التنفيذية للبعثات على السفر </h5></label>
+                <input type="date" id="committeeApprovalDate" name="committeeApprovalDate">
+            </div>
+            <div class="input-box">
+                <label for="publicAdministrationApprovalDate"><h5>تاريخ موافقة الإدارة العامة للاستطلاع والمعلومات على السفر </h5></label>
+                <input type="date" id="publicAdministrationApprovalDate" name="publicAdministrationApprovalDate">
+            </div>
+            <div class="input-box">
+                <label for="facultyMemberLastTravelDate"><h5>تاريخ آخر سفر لعضو هيئة التدريس </h5></label>
+                <input type="date" id="facultyMemberLastTravelDate" name="facultyMemberLastTravelDate">
+            </div>
+            <div class="input-box">
+                <label for="lastContribution"><h5>قيمة آخر مساهمة تم الحصول عليها </h5></label>
+                <input type="number" id="lastContribution" name="lastContribution" placeholder="القيمة" required>
+            </div>
+            <div class="category">
+                <label for="currency"><h5>العملة</h5></label>
+                <select id="currency" name="currency" required>
+                    <option value="EGP">جنيه</option>
+                    <option value="USD">دولار</option>
+                    <option value="other">أخرى</option>
+                </select>
+            </div>
+            <div class="button">
+                <input type="submit" value="حفظ">
+            </div>
+        </form>
+    </div>
+    <script src="./bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

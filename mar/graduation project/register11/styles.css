@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url("./WhatsApp\ Image\ 2023-12-16\ at\ 11.25.18\ PM.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff00;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.495);
+    font-size: 19px;
+    
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+   
+}
+.navbar{
+    width: 86%;
+    display: flex;
+    margin: auto;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar .LL{
+    width: 160px;
+    cursor: pointer;
+    margin-top: -2%;
+    margin-left: -6%;
+  }
+ul {
+    margin-top: -4%;
+}
+
+ul li {
+    list-style: none;
+    display: table-cell;
+    padding: 10px 16px;
+}
+
+ul li a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: darkslategray;
+    margin-top: -3%;
+    transition: 0.4s ease;
+}
+
+ul li a:hover {
+    color: rgb(230, 104, 59);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 87%;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+/* ._radio {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+select {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+} */
+
+._radio {
+    display: flex;
+    flex-direction: row;
+    gap:130px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+._radio div {
+    display: flex;
+    align-items: center;
+}
+
+._radio label {
+    margin-left: 5px;
+}
+
+
+.btn {
+    text-align: center; 
+    display: block;
+    width: 70%;
+    padding: 10px;
+    margin: 0 auto;  
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #0a0b0b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(230, 104, 59);
+}
+
+.log {
+    text-align: center; 
+}
+
+.log p {
+    font-size: 20px;
+    margin: 0; 
+}
+
+.log a {
+    color: rgb(230, 104, 59);
+    font-size: 20px;
+}

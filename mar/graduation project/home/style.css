@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden; /* Prevent scrolling while keeping the video as the background */
+}
+
+/* Add styling for the video background */
+video#videoBG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place it behind other elements */
+}
+
+.main {
+    position: relative; /* Ensure the content is positioned relative to this container */
+    z-index: 1; /* Place it above the video */
+    font-family: sans-serif;
+}
+.container {
+    max-width: 1320px;
+    margin: auto;
+}
+.navbar {
+    display: flex;
+    margin: auto;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .LL {
+    width: 160px;
+    cursor: pointer;
+    margin-top: -2%;
+    margin-left: -20%;
+}
+
+ul {
+    margin-top: -4%;
+    margin-left: 9%;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 16px;
+}
+
+ul li a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(235, 245, 245);
+    margin-top: -3%;
+    transition: .4s ease;
+}
+
+ul li a:hover {
+    color: rgb(230, 104, 59);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .sub-menu {
+    position: absolute;
+    width: 200px;
+    padding: 12px;
+    top: 100%;
+    left: 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dropdown:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-menu li {
+    width: 100%;
+    text-align: right;
+    display: block;
+    float: right;
+    padding: 8px 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+.sub-menu li:last-child {
+    border-bottom: none;
+    color: black;
+}
+
+.info h1 {
+    font-size: 65px;
+    margin: 12px 0;
+    animation: floatTextAnimation 4s ease-in-out infinite;
+}
+
+.info h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: rgb(252, 252, 252);
+}
+
+.info span {
+    color: rgb(228, 78, 24);
+}
+
+.info a {
+    text-decoration: none;
+    color: #fff;
+    background: rgb(240, 240, 240);
+    margin: 26px 0;
+    padding: 10px 18px;
+    border-radius: 18px;
+    display: inline-block;
+    transition: .4s ease;
+}
+
+.content-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 6rem;
+}
+
+.content-box .image {
+    max-width: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10%);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(10%);
+    }
+}
+
+/* إضافة أنيميشن للنص */
+.info h1 {
+    font-size: 65px;
+    margin: 12px 0;
+    color: rgb(255, 255, 255);
+    animation: floatTextAnimation 4s ease-in-out infinite;
+}
+
+@keyframes floatTextAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(10px);
+    }
+}

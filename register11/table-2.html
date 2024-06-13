@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <title>طلب سفر بحثي ما بعد الدكتوراه</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <h2> مجلس العلاقات الثقافية </h2>
+    </header>
+    <main>
+        <form action="table_2.php" method="post" id="applicationForm">
+            <table>
+                <thead>
+                    <nav>
+                        <ul>
+                            <li><a href="#">الصفحة الرئيسية</a></li>
+                            <li><a href="#">من نحن</a></li>
+                            <li><a href="#">تواصل معنا</a></li>
+                        </ul>
+                    </nav>
+                    <tr>
+                        <th>استيفاء الشروط</th>
+                        <th>نعم</th>
+                        <th>لا</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <img src="LL.jpg" alt="LL">
+                    
+                    <tr>
+                        <td><a href="https://ibb.co/Cs83YCf" target="_blank">جميع الوثائق المقدمة من مقدم الطلب مستوفاه و صحيحه</a></td>
+                        <td><input type="radio" name="offer1" value="yes" required></td>
+                        <td><input type="radio" name="offer1" value="no" required></td>
+                    </tr>
+
+
+                    </div>
+                    <tr>
+                        <td><a href="https://ibb.co/Cs83YCf">استوفى مقدم الطلب شروط سفره فى مهمه علميه لاجراء ابحاث ما بعد الدكتوراه</a></td>
+                        <td><input type="radio" name="offer2" value="yes" required></td>
+                        <td><input type="radio" name="offer2" value="no" required></td>
+                    </tr>
+                    <tr>
+                        <td>مقدم الطلب له حق فى سفره فى مهمه علميه لاجراء ابحاث مابعد الدكتوراه </td>
+                        <td><input type="radio" name="offer3" value="yes" required></td>
+                        <td><input type="radio" name="offer3" value="no" required></td>
+                    </tr>
+                    <tr>
+                        <td>توجد موافقة مجلس القسم </td>
+                        <td><input type="radio" name="offer4" value="yes" required></td>
+                        <td><input type="radio" name="offer4" value="no" required></td>
+                    </tr>
+                    <tr>
+                        <td>تعاد مره اخرى الى رئيس القسم لاستيفاء المتطلبات</td>
+                        <td><input type="radio" name="offer5" value="yes" required></td>
+                        <td><input type="radio" name="offer5" value="no" required></td>
+                    </tr>
+                    <tr>
+                        <td>تم رفض الطلب لعدم استيفاء الشروط</td required>
+                        <td><input type="radio" name="offer6" value="yes" required></td>
+                        <td><input type="radio" name="offer6" value="no" required></td>
+                    </tr>
+                    <tr>
+                        <th rowspan="4" dir="rtl"> وافق مجلس العلاقات الثقافية</th>
+                        <td>
+                            <label>رقم الجلسه</label>
+                            <input type="number" name="Sessionnumber" placeholder="رقم السجلة" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>التاريخ</label>
+                            <input type="date" name="SessionDate" placeholder="التاريخ" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>اسم وكيل الكليه لشئون الدراسات العليا والبحوث</label>
+                            <input type="text" name="name" placeholder="اسم وكيل الكليه لشئون الدراسات العليا والبحوث"
+                                required>
+                        </td>
+                    </tr>
+                  
+                    <tr>
+                        <td>
+                            <label>تحال الى عميد الكليه</label>
+                            <button class="btn-submit" type="submit" name="submit">Submit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </main>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("applicationForm");
+        var referralSelect = document.getElementById("referral");
+        var notificationsIcon = document.getElementById("notificationsIcon");
+        var notificationsDropdown = document.getElementById("notificationsDropdown");
+
+        referralSelect.addEventListener("change", function () {
+            var selectedOption = referralSelect.value;
+            var action = "";
+
+            if (selectedOption === "department") {
+                action = "index_form.php"; // قم بتغيير هذا إلى الصفحة الفعلية للقسم
+            } else if (selectedOption === "cultural_council") {
+                action = "cultural_council.php"; // قم بتغيير هذا إلى الصفحة الفعلية للمجلس الثقافي
+            }
+            // قم بإضافة المزيد من الشروط حسب الحاجة
+
+            form.action = action;
+
+            // غيّر لون أيقونة الإشعارات إلى الأحمر عند إرسال الطلب
+            notificationsIcon.classList.add("red");
+
+            // أضف طلب إشعار جديد إلى Dropdown
+            addNotificationToDropdown("تم إرسال طلب جديد");
+        });
+
+        // إضافة إشعارات لـ Dropdown
+        function addNotificationToDropdown(message) {
+            var notificationItem = document.createElement("div");
+            notificationItem.innerHTML = message;
+            notificationsDropdown.appendChild(notificationItem);
+        }
+
+        // عرض قائمة الإشعارات
+        function showNotificationsDropdown() {
+            notificationsDropdown.style.display = "block";
+        }
+    });
+</script>
+
+</html>

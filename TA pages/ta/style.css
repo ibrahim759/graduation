@@ -1,0 +1,189 @@
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      /* استخدام صورة الخلفية */
+      background: url("./lol.jpg") no-repeat fixed center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    header {
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    /* الأنماط الأخرى لم تتغير ولكن يمكنك ضبطها وفقًا لاحتياجاتك */
+
+
+    h2 {
+      color:#333;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 70%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      direction: rtl;
+      position: relative;
+    }
+
+    .home-page {
+      height: 30px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+    }
+
+    th[dir="ltr"] {
+      background-color: #000000;
+      /*  استيفاء الشروط */
+      color: #fff;
+    }
+
+    th[dir="rtl"] {
+      background-color: #000000;
+      /*  وافق مجلس القسم */
+      color: #fff;
+    }
+
+    th[dir="rtl"]:nth-child(3) {
+      background-color: #000000;
+      /*  لا */
+    }
+
+    tr:hover {
+      background-color:whitesmoke;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    td[dir="rtl"] {
+      text-align: right;
+      color: #000000;
+      /* White text */
+    }
+
+    td[dir="ltr"] {
+      text-align: left;
+    }
+
+    .navListClass li:hover {
+  
+      cursor: pointer;
+      background-color: black;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    nav li {
+      float: right;
+    }
+
+    nav a {
+      display: block;
+      color: white;
+      text-align: center;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+    }
+    .btn-submit {
+    margin: 10px;
+    border-radius: 10px;
+    height: 50px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: black;
+    color: white;
+}
+.btn-submit:hover {
+color:gold;
+font-size: 15px;
+cursor: pointer;
+border-color: transparent;
+background-color:black;
+transform: scale(1.1);
+outline: 2px solid #f7f7f7;
+box-shadow: 10px 10px 7px 5px whitesmoke;
+}
+.btn-submit::before {
+content: "";
+position: absolute;
+      top: 75%;
+      left: 50%;
+width: 0;
+height: 100%;
+background-color: #363432;
+transform: skewX(45deg);
+z-index: -1;
+transition: width 1000ms;
+}
+
+
+
+.bgh{
+  background-color: transparent !important;
+}
+
+
+.navListClass  {
+width: full;
+display: flex;
+gap: 10px;
+justify-self: center;
+justify-content: center;
+height: 100px;
+
+}
+
+.navListClass li{
+  
+  margin: 10px;
+  border-radius: 10px;
+  height: 20px;
+padding: 10px;
+padding-left: 30px;
+padding-right: 30px;
+background-color: whitesmoke;
+}
+
+.btnbg{
+  background-color: transparent !important;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  border: 0px   ;
+}
+
+.btn-submit {
+position: relative;
+margin-left: 45%;
+}
+.bc{
+  color:gold;
+}

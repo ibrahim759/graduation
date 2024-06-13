@@ -1,0 +1,48 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/Tas.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+.card{
+  height: 2000px;
+}
+label {
+  margin-right: 3px;
+}
+input {
+  margin-right: 15px;
+  border: 1px solid gray;
+  border-radius: 6px;
+}
+.main ul{
+  margin-top: -4%;
+}
+
+.main ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 10px 16px;
+}
+
+.main ul li a{
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: darkslategray;
+  margin-top: -3%;
+  transition: .4s ease;
+
+}
+
+.main ul li a:hover{
+  color: rgb(230,104,59);
+}
+#faculty-user_btn {
+  color: black;
+}

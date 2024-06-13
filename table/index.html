@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقديم طلب لمجلس القسم للسفر للدكتوراه</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+        <img src="images/LL.jpg" class="LL">
+        <ul>
+            <li><a href="#">الصفحة الرئيسية</a></li>
+            <li><a href="#"> من نحن؟</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="parent">
+        <div class="main-title">
+            <h1>تقديم طلب لمجلس القسم  </h1>
+        </div>
+
+        <div class="main-content">
+            <form action="connect.php" method="post">
+            <table class="datatable">
+                <tr>
+                    <th>استيفاء الشروط</th>
+                    <th>هل البيانات صحيحة؟</th>
+                </tr>
+                <tr>
+                    <td>بيانات مقدم الطلب</td>
+                    <td class="brd-right">
+                        <div class="labels">
+                            <label>
+                                <input type="radio" name="data_validation_1" value="نعم" checked> نعم
+                            </label>
+                            <label>
+                                <input type="radio" name="data_validation_1" value="لا"> لا
+                            </label>
+                        </div>
+                        
+                    </td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td>استوفي مقدم الطلب كل شروط سفره </td>
+                    <td class="brd-right">
+                        <div class="labels">
+                            <label>
+                                <input type="radio" name="data_validation_2" value="نعم" checked> نعم
+                            </label>
+                            <label>
+                                <input type="radio" name="data_validation_2" value="لا"> لا
+                            </label>
+                        </div>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>مقدم الطلب له حق في سفره في مهمة علمية</td>
+                    <td class="brd-right">
+                        <div class="labels">
+                            <label>
+                                <input type="radio" name="data_validation_3" value="نعم" checked> نعم
+                            </label>
+                            <label>
+                                <input type="radio" name="data_validation_3" value="لا"> لا
+                            </label>
+                        </div>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>تعاد مرة أخرى لرئيس القسم لاستيفاء المتطلبات</td>
+                    <td class="brd-right">
+                        <div class="labels">
+                            <label>
+                                <input type="radio" name="data_validation_4" value="نعم" checked> نعم
+                            </label>
+                            <label>
+                                <input type="radio" name="data_validation_4" value="لا"> لا
+                            </label>
+                        </div>
+                        
+                    </td>
+                </tr> 
+                <tr>
+                    <td>تم رفض الطلب لعدم استيفاء الشروط</td>
+                    <td class="brd-right">
+                        <div class="labels">
+                            <label>
+                                <input type="radio" name="data_validation_5" value="نعم" checked> نعم
+                            </label>
+                            <label>
+                                <input type="radio" name="data_validation_5" value="لا"> لا
+                            </label>
+                        </div>
+
+                    </td>
+                </tr> 
+                <tr>
+                    <td rowspan="4">موافقة مجلس القسم</td>
+                    <td class="brd-right">رقم الجلسة</td>
+                    <td><input type="number" name="data_validation_6"></td>
+                  </tr>
+                  <tr>
+                    <td class="brd-right">التاريخ</td>
+                    <td><input type="date" name="data_validation_7"></td>
+                  </tr>
+                  <tr>
+                    <td class="brd-right">اسم رئيس مجلس القسم</td>
+                    <td><input type="text"  name="data_validation_8"></td>
+                  </tr>
+                  <tr>
+                    <td class="brd-right">تحال الي وكيل الكلية لشؤن الدراسات العليا</td>
+                    <td class="text-center"><button class="btn-submit">Submit</button></td>
+                  </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
